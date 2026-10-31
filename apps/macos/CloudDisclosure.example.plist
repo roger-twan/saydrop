@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<!-- After review, add actual values to the app's Info-Debug.plist / Info.plist. This file is not loaded automatically. Empty values must keep uploads disabled. -->
+<key>SaydropCloudDisclosureVersion</key><string></string>
+<key>SaydropCloudReceiver</key><string></string>
+<key>SaydropCloudPurpose</key><string></string>
+<key>SaydropCloudRetention</key><string></string>
+</dict></plist>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>zh_CN</string>
+	<key>CFBundleDisplayName</key>
+	<string>Saydrop</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>Saydrop</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>CFBundleIconFile</key>
+	<string>Saydrop</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>14.0</string>
+	<key>LSUIElement</key>
+	<true/>
+	<key>LSArchitecturePriority</key>
+	<array>
+		<string>arm64</string>
+	</array>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Records audio only when you start or resume voice input. The microphone is off while idle, paused, or transcribing.</string>
+	<key>NSHighResolutionCapable</key>
+	<true/>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>SaydropBackendURL</key>
+	<string>$(SAYDROP_BACKEND_URL)</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+	<key>SaydropCloudDisclosureVersion</key>
+	<string>2026-10-26-local-v2</string>
+	<key>SaydropCloudReceiver</key>
+	<string>Personal use only. The local backend is http://127.0.0.1:8000. Its configuration selects the recognition provider: Groq (api.groq.com; whisper-large-v3-turbo or whisper-large-v3) or OpenRouter (openrouter.ai; elevenlabs/scribe-v2 or openai/whisper-large-v3-turbo). Light polish uses openai/gpt-4.1-mini in OpenRouter mode. Groq mode does not call a cloud polishing model and explicitly falls back to the raw transcript. Recognition is not fully offline.</string>
+	<key>SaydropCloudPurpose</key>
+	<string>Sends this recording to a cloud model for transcription. Only when light polish is selected is the transcript sent to a polishing model to improve punctuation and phrasing. Provider keys remain on the local backend.</string>
+	<key>SaydropCloudRetention</key>
+	<string>The local backend does not store audio or transcript text in its database. Audio is processed in memory and released after recognition; result text remains in memory for at most 120 seconds. The database retains authentication, quota, budget, and task metadata. Task status and idempotency records remain for at least 7 days; numeric metrics remain for 30 days. Groq, OpenRouter, and downstream providers' retention, training, and deletion practices have not been verified locally and depend on their policies and account settings. No zero-retention or no-training promise is made. Local cancellation cannot guarantee withdrawal of data already sent.</string>
+</dict>
+</plist>
